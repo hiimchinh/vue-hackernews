@@ -10,18 +10,20 @@
     "test:unit": "jest"
   },
   "dependencies": {
-    "firebase": "^5.0.4",
-    "vue": "^2.5.16"
+    "firebase": "^5.11.1",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.16",
-    "@vue/cli-service": "^3.0.0-beta.15",
-    "@vue/eslint-config-standard": "^3.0.0-beta.16",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^3.12.1",
+    "@vue/eslint-config-standard": "^3.0.5",
     "babel-core": "^7.0.0-bridge.0",
-    "cross-env": "^5.2.0",
+    "babel-jest": "^23.6.0",
+    "cross-env": "^5.2.1",
     "jest": "^23.6.0",
-    "vue-template-compiler": "^2.5.16"
+    "vue-jest": "^2.6.0",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
@@ -39,6 +41,12 @@
     },
     "parserOptions": {
       "parser": "babel-eslint"
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
     }
   },
   "postcss": {
